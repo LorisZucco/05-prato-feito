@@ -1,0 +1,126 @@
+/* Tokens: o tema claro mora no :root; o escuro só redefine as variáveis em :root.dark */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: light;
+
+  --bg: #f3f5f0;
+  --surface: #ffffff;
+  --surface-2: #eaefe7;
+  --ink: #17261e;
+  --muted: #566860;
+  --line: #dde4dd;
+  --line-strong: #bfcbc3;
+  --control: #74857b;
+
+  --brand: #c8341b;
+  --on-brand: #ffffff;
+  --brand-soft: #fff1ee;
+  --corn: #f6c445;
+  --on-corn: #17261e;
+  --leaf: #2a7548;
+  --on-leaf: #ffffff;
+
+  --plate-rim: #e6eae1;
+  --plate-rim-hi: #ffffff;
+  --plate-well: #f8f9f5;
+  --shadow: rgba(23, 38, 30, 0.28);
+  --cloth: 4.5%;
+
+  --art-sat: 78%;
+  --art-l1: 94%;
+  --art-l2: 83%;
+
+  --radius-m: 16px;
+  --radius-l: 24px;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+}
+
+:root.dark {
+  color-scheme: dark;
+
+  --bg: #0e1612;
+  --surface: #16221c;
+  --surface-2: #1d2c24;
+  --ink: #e8f0ea;
+  --muted: #9bb0a3;
+  --line: #263a30;
+  --line-strong: #3a5446;
+  --control: #71897b;
+
+  --brand: #ff6b4a;
+  --on-brand: #0e1612;
+  --brand-soft: #3b2019;
+  --leaf: #5cc48a;
+  --on-leaf: #0e1612;
+
+  --plate-rim: #2b3c32;
+  --plate-rim-hi: #3a4f43;
+  --plate-well: #1c2a23;
+  --shadow: rgba(0, 0, 0, 0.6);
+  --cloth: 7%;
+
+  --art-sat: 46%;
+  --art-l1: 25%;
+  --art-l2: 17%;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+svg {
+  flex: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

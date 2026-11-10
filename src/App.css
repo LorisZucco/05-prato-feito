@@ -1,0 +1,60 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 16px 104px;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+  margin-bottom: 16px;
+}
+
+.section-head h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+@media (min-width: 720px) {
+  .layout {
+    padding: 24px 32px 48px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .layout {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px 32px;
+  }
+
+  .week {
+    width: 100%;
+  }
+
+  .recipes {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .shopping {
+    flex: none;
+    width: 360px;
+    position: sticky;
+    top: 88px;
+    max-height: calc(100vh - 112px);
+    overflow: auto;
+  }
+}
