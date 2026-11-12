@@ -22,7 +22,7 @@ export default function PlannerProvider({ children }) {
   }
 
   return (
-    <PlannerContext.Provider value={{ plan, toogleRecipe }}>
+    <PlannerContext.Provider value={{ plan, toggleRecipe }}>
       {children}
     </PlannerContext.Provider>
   );
